@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def get_time():
-    return datetime.now().timestamp()
+    return str(datetime.now().timestamp())
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 6738))
